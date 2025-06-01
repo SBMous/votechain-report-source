@@ -1,0 +1,66 @@
+[package]
+name = "vote-node"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = { version = "1.12.0", features = ["attributes"] }
+bincode = "1.3.3"
+clap = { version = "4.4.14", features = ["derive"] }
+confique = "0.2.5"
+ed25519-dalek = { version = "2.1.0", features = ["rand_core", "pkcs8", "std", "serde"] }
+futures = "0.3.30"
+futures-timer = "3.0.2"
+rand = "0.8.5"
+serde = "1.0.195"
+vote-lib = { path = "../lib"}
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+tracing = "0.1.40"
+time = "0.3.34"
+heed = { version = "0.11.0", features = ["serde-bincode"] }
+blake3 = { version = "1.5.0", features = ["serde"] }
+hex = "0.4.3"
+tempfile = "3.10.0"
+quick-protobuf-codec = "0.3.1"
+quick-protobuf = "0.8.0"
+asynchronous-codec = { version = "0.7.0", features = ["cbor"] }
+void = "1.0.2"
+futures-ticker = "0.0.3"
+local-ip-address = "0.6.1"
+
+[dependencies.libp2p]
+version = "0.53.2"
+features = [
+    "async-std",
+    "gossipsub",
+    "mdns",
+    "noise",
+    "macros",
+    "tcp",
+    "yamux",
+    "quic",
+    "kad",
+    "identify",
+    "request-response",
+    "cbor",
+    "ed25519",
+]
+# Path for using local version if required
+# path = "G:/projects/university/UGPR-ECS/repositories/rust-libp2p/libp2p"
+
+
+[build-dependencies]
+pb-rs = "0.10.0"
+
+[dependencies.paillier]
+package = "kzen-paillier"
+version = "0.4.3"
+path = "../rust-paillier"
+default-features = false
+
+[dependencies.curv-kzen]
+version = "0.10"
+default-features = false
+features = ["num-bigint"]

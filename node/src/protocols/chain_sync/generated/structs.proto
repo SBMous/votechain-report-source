@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+message Heartbeat {
+    optional uint32 height = 0;
+}
+
+

@@ -1,0 +1,36 @@
+[package]
+name = "vote-lib"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = { version = "1.12.0", features = ["attributes"] }
+bincode = "1.3.3"
+clap = { version = "4.4.14", features = ["derive"] }
+confique = "0.2.5"
+ed25519-dalek = { version = "2.1.0", features = ["rand_core", "pkcs8", "std", "serde"] }
+hex = "0.4.3"
+rand = "0.8.5"
+serde = "1.0.195"
+time = { version = "0.3.34", features = ["serde"] }
+
+
+[dependencies.paillier]
+package = "kzen-paillier"
+version = "0.4.3"
+path = "../rust-paillier"
+default-features = false
+
+
+[dependencies.curv-kzen]
+version = "0.10"
+default-features = false
+features = ["num-bigint"]
+
+[dependencies.zk-paillier]
+version = "0.4.4"
+path = "../zk-paillier"
+default-features = false
+# features = ["curv-kzen/num-bigint"]

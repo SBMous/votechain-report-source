@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "client",
+    "lib",
+    "node"
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["George Yarnley"]
+description = "All components for the Pnyx ecosystem"
+readme = "./README.md"

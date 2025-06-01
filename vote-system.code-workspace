@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "vote-node"
+		},
+		{
+			"path": "vote-client"
+		},
+		{
+			"path": "vote-lib"
+		}
+	],
+	"settings": {
+		"rust-analyzer.linkedProjects": [
+			".\\Cargo.toml"
+		]
+	}
+}
